@@ -6,7 +6,7 @@ function applyScript() {
 
   // add prefix
   const emberActionElement = document.querySelector('[data-test-variation-name=""]');
-  if (emberActionElement) {
+  if (emberActionElement && emberActionElement.getAttribute('value') == 'Regular') {
     console.log('set value');
     if (category_name) {
       emberActionElement.setAttribute('value', 'Eastons Books - ' + category_name);
