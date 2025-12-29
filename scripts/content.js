@@ -1,14 +1,28 @@
+
+var category_name = '';
+
 // Function to apply your script
 function applyScript() {
-  console.log('Applying script to current DOM...');
+//   console.log('Applying script to current DOM...');
 
-  // Your script logic here
+  // add prefix
   const emberActionElement = document.querySelector('[data-test-variation-name=""]');
   if (emberActionElement) {
     console.log('set value');
-    emberActionElement.setAttribute('value', 'Eastons Books - ');
+    if (category_name) {
+      emberActionElement.setAttribute('value', 'Eastons Books - ' + category_name);
+    }
   } else {
-    console.log('Ember action element not found yet.');
+    // console.log('Ember action element not found yet.');
+  }
+
+  // add category
+  const categoryElement = document.querySelector('[class="advanced-categorization__category-list"]');
+  if (categoryElement) {
+      category_name = categoryElement.firstElementChild.textContent;
+      console.log('category set to: ' + category_name);
+  } else {
+    // console.log('Category element not found yet.');
   }
 }
 
