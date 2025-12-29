@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "EastonsBooks",
+    "version": "1.0",
+    "description": "auto completion of variation name",
+    "permissions": ["activeTab", "scripting"],
+    "host_permissions": ["https://app.squareup.com/*"],
+    "content_scripts": [
+        {
+            "matches": ["https://app.squareup.com/dashboard/items/*"],
+            "js": ["scripts/content.js"]
+        }
+    ]
+}
