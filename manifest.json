@@ -7,7 +7,7 @@
     "host_permissions": ["https://app.squareup.com/*"],
     "content_scripts": [
         {
-            "matches": ["https://app.squareup.com/dashboard/items/*"],
+            "matches": ["https://app.squareup.com/*"],
             "js": ["scripts/content.js"]
         }
     ]
