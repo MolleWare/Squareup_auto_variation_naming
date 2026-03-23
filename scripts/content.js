@@ -5,8 +5,8 @@ var category_name = '';
 function applyScript() {
 
   // add prefix
-  const emberActionElement = document.querySelector('[data-test-variation-name=""]');
-  if (emberActionElement && emberActionElement.getAttribute('value') == 'Regular') {
+  const emberActionElement = document.querySelector('[placeholder="Such as a size"]');
+  if (emberActionElement) {
     console.log('set value');
     if (category_name) {
       emberActionElement.setAttribute('value', 'Eastons Books - ' + category_name);
@@ -16,7 +16,7 @@ function applyScript() {
 
   // add category
   if( category_name == '') {
-    const categoryElement = document.querySelector('[class="advanced-categorization__category-list"]');
+    const categoryElement = document.querySelector('[class="_name_d8c7fc7"]');
     if (categoryElement) {
         category_name = categoryElement.firstElementChild.textContent;
         console.log('category set to: ' + category_name);
