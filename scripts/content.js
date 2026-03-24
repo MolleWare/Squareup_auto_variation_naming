@@ -18,7 +18,7 @@ function applyScript() {
   if( category_name == '') {
     const categoryElement = document.querySelector('[class="_name_d8c7fc7"]');
     if (categoryElement) {
-        category_name = categoryElement.firstElementChild.textContent;
+        category_name = categoryElement.textContent;
         console.log('category set to: ' + category_name);
     }
   }
