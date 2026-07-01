@@ -9,7 +9,7 @@ function applyScript() {
   if (emberActionElement) {
     console.log('set value');
     if (category_name) {
-      emberActionElement.setAttribute('value', 'Eastons Books - ' + category_name);
+      emberActionElement.value = ('Eastons Books - ' + category_name);
       category_name = '';
     }
   }
